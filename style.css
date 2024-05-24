@@ -92,7 +92,7 @@
         color: #777;
       }
       header {
-        position: absolute;
+        position: fixed;
         left: 0;
         width: 100%;
         z-index: 2;
@@ -223,9 +223,9 @@
           }
           .landing .text {
             animation-name:child1;
-            animation-duration: 2s;
+            animation-duration: 1s;
             animation-timing-function: linear;
-            animation-iteration-count: 1;
+            animation-iteration-count: 2;
             animation-delay: 0.5s;
             transform-origin: top left;
         transform: scaleX(0);
@@ -911,7 +911,7 @@
     width: fit-content;
     margin: 30px auto;
   }
-  #shop .contact-text {
+ #shop .contact-text {
     text-align: center;
     margin: 50px auto 20px;
     font-size: 20px;
@@ -925,6 +925,33 @@
     padding: 15px 30px;
     text-decoration: none;
   }
+  #shop .plans .plan .foot a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+    color: black;
+} #shop .plans .plan .foot a ::after{
+  content: "";
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(var(--main-color),transparent);
+
+  position: absolute;
+}
+#shop .plans .plan .foot a:hover{
+  background: var(--main-color);
+  box-shadow: 0 0 20px 5px ;
+
+  
+
+} 
   /* End Pricing */
   /* Start Subscribe */
   .subscribe {
